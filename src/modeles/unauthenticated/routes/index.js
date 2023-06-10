@@ -15,13 +15,14 @@ export const unauthRoutes = [
     element: <LoginScreen />
   },
   {
-    path: '/signup',
-    element: <RegisterScreen />
-  },
-  {
     path: '/forgot-password',
     element: <ForgotPasswordScreen />
   },
+  {
+    path: '/signup',
+    element: <RegisterScreen />
+  },
+
   {
     path: '/reset-password',
     element: <ResetPasswordScreen />
