@@ -17,7 +17,7 @@ export const BookCard = ({ cover_url, name, author }) => {
         w="154px"
         borderRadius="12px"
       />
-      <Text mt="12px" fontSize="12px" fontWeight="600">
+      <Text mt="8px" fontSize="12px" fontWeight="600">
         {name}
       </Text>
       <Text mt="4px" fontSize="10px">

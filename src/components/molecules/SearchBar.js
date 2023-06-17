@@ -3,7 +3,7 @@ import { SearchIcon } from '@chakra-ui/icons'
 
 export const SearchBar = () => {
   return (
-    <Flex w="478px" h="52px" bg="brand.greyLight" borderRadius="12PX">
+    <Flex w="478px" h="52px" bg="brand.greylight" borderRadius="12PX">
       <InputGroup>
         <InputLeftElement h="100%">
           <SearchIcon color="brand.greyDark"></SearchIcon>
