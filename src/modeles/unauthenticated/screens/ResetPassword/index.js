@@ -108,11 +108,10 @@ export const ResetPasswordScreen = () => {
 
           <Button
             isLoading={mutation.isLoading}
-            mb="12px"
             mt="24px"
             onClick={handleSubmit}
           >
-            Cadastrar
+            Salvar
           </Button>
           <Link.Action
             mt="8px"
@@ -123,7 +122,7 @@ export const ResetPasswordScreen = () => {
       </Flex>
       <Flex
         w={['0', '0px', '0px', '60%']}
-        h="100%"
+        h="100vh"
         backgroundImage="url('/img/Auth_background.svg.svg')"
         backgroundSize="cover"
         backgroundPosition="center"

@@ -124,7 +124,7 @@ export const LoginScreen = () => {
       </Flex>
       <Flex
         w={['0', '0px', '0px', '60%']}
-        h="100%"
+        h="100vh"
         backgroundImage="url('/img/Auth_background.svg.svg')"
         backgroundSize="cover"
         backgroundPosition="center"

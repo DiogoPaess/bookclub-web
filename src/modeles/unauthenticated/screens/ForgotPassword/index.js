@@ -8,8 +8,8 @@ import { forgotPasswordCall } from 'services/api/requests'
 
 export const ForgotPasswordScreen = () => {
   const navigate = useNavigate()
-
   const toast = useToast()
+
   const mutation = useMutation((data) => forgotPasswordCall(data), {
     onError: (error) => {
       toast({

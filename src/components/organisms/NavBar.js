@@ -11,8 +11,15 @@ export const NavBar = () => {
       paddingX={['24px', '0px', '80px', '112px']}
       padding={['24px']}
     >
-      <Img src="/img/logo.svg.svg" alt="BookClub Logo" w="160px" h="48px" />
-      <SearchBar />
+      <Img
+        src="/img/logo.svg.svg"
+        alt="BookClub Logo"
+        w={['100px', '160px']}
+        h="48px"
+      />
+      <Flex display={['none', 'flex']}>
+        <SearchBar />
+      </Flex>
       <UserMenu />
     </Flex>
   )
