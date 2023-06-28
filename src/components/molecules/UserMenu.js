@@ -1,6 +1,7 @@
 import { Text, MenuItem } from 'components/atoms'
 import { Avatar, Flex, Menu, MenuButton, MenuList } from '@chakra-ui/react'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { BsBookmarkStar } from 'react-icons/bs'
 import { BiUser, BiCheckShield } from 'react-icons/bi'
@@ -10,45 +11,52 @@ import {
   HiOutlineLogout
 } from 'react-icons/hi'
 
-export const UserMenu = () => {
+export const UserMenu = ({ setShowModal, onLogout }) => {
   const userStore = useSelector((state) => state.user)
+  const navigate = useNavigate()
 
   const menuOptions = [
     {
       id: 0,
       icon: BsBookmarkStar,
       text: 'Favoritos',
-      divider: false
+      divider: false,
+      onClick: () => navigate('/favorites')
     },
     {
       id: 1,
       icon: BiUser,
       text: 'Dados Pessoais',
-      divider: false
+      divider: false,
+      onClick: () => setShowModal('user')
     },
     {
       id: 2,
       icon: BiCheckShield,
       text: 'Alterar Senha',
-      divider: true
+      divider: true,
+      onClick: () => setShowModal('password')
     },
     {
       id: 3,
       icon: HiOutlineDocumentText,
       text: 'Termos de uso',
-      divider: false
+      divider: false,
+      onClick: () => setShowModal('terms')
     },
     {
       id: 4,
       icon: HiOutlineClipboard,
       text: 'Política de Privacidade',
-      divider: true
+      divider: true,
+      onClick: () => setShowModal('privacy-policy')
     },
     {
       id: 5,
       icon: HiOutlineLogout,
       text: 'Logout',
-      divider: false
+      divider: false,
+      onClick: () => onLogout()
     }
   ]
 
@@ -77,11 +85,9 @@ export const UserMenu = () => {
       <MenuList>
         {menuOptions.map((item) => (
           <MenuItem
+            onClick={() => item.onClick()}
             key={`menu_item_${item.id}`}
-            id={item.id}
-            icon={item.icon}
-            text={item.text}
-            divider={item.divider}
+            {...item}
           />
         ))}
       </MenuList>
