@@ -1,3 +1,7 @@
 export * from './auth'
 export * from './books'
 export * from './category'
+export * from './Favorites'
+export * from './search'
+export * from './user'
+export * from './author'
