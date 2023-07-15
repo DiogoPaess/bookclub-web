@@ -12,6 +12,7 @@ export const CategoryList = ({ title, categoryId }) => {
     data: bookQuery,
     refetch,
     isLoading
+<<<<<<< HEAD
   } = useQuery(
     [`bookById'-${selected}`, selected],
     () => getBooksByCategory(selected),
@@ -21,6 +22,11 @@ export const CategoryList = ({ title, categoryId }) => {
       refetchOnMount: true
     }
   )
+=======
+  } = useQuery(['bookById', selected], () => getBooksByCategory(selected), {
+    enabled: !!selected
+  })
+>>>>>>> b217249382c4874c5fa51dd40d7436d9131b18f8
 
   useEffect(() => {
     if (!selected && data?.data) {
@@ -29,10 +35,14 @@ export const CategoryList = ({ title, categoryId }) => {
   }, [data])
 
   useEffect(() => {
+<<<<<<< HEAD
     if (categoryId) {
       setSelected(categoryId)
       refetch()
     }
+=======
+    refetch()
+>>>>>>> b217249382c4874c5fa51dd40d7436d9131b18f8
   }, [categoryId])
 
   return (
