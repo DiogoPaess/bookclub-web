@@ -12,9 +12,8 @@ export const CategoryList = ({ title, categoryId }) => {
     data: bookQuery,
     refetch,
     isLoading
-<<<<<<< HEAD
   } = useQuery(
-    [`bookById'-${selected}`, selected],
+    [`booksById-'${selected}`, selected],
     () => getBooksByCategory(selected),
     {
       enabled: !!selected,
@@ -22,11 +21,6 @@ export const CategoryList = ({ title, categoryId }) => {
       refetchOnMount: true
     }
   )
-=======
-  } = useQuery(['bookById', selected], () => getBooksByCategory(selected), {
-    enabled: !!selected
-  })
->>>>>>> b217249382c4874c5fa51dd40d7436d9131b18f8
 
   useEffect(() => {
     if (!selected && data?.data) {
@@ -35,14 +29,10 @@ export const CategoryList = ({ title, categoryId }) => {
   }, [data])
 
   useEffect(() => {
-<<<<<<< HEAD
     if (categoryId) {
       setSelected(categoryId)
       refetch()
     }
-=======
-    refetch()
->>>>>>> b217249382c4874c5fa51dd40d7436d9131b18f8
   }, [categoryId])
 
   return (
@@ -90,7 +80,7 @@ export const CategoryList = ({ title, categoryId }) => {
         {!isLoading && bookQuery && bookQuery?.data?.length === 0 && (
           <EmptyMessage>Nenhum livro encontrado</EmptyMessage>
         )}
-        {bookQuery &&
+        {bookQuery?.data &&
           bookQuery?.data.map((item) => (
             <BookCard key={`book_${item.id}`} {...item} />
           ))}
