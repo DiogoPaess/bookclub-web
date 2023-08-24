@@ -1,7 +1,7 @@
 # BookClub
 
 <p>
-  <img height="500" src="https://github.com/DiogoPaess/bookclub-web/blob/master/public/img/login.png" />
+  <img height="500" src="https://github.com/DiogoPaess/bookclub-web/blob/main/public/login.png" />
 </p>
 
 ## Description
