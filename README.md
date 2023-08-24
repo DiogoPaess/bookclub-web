@@ -1,6 +1,8 @@
 # BookClub
 
-[![Bookclub Demo](/public/img/login.png 'Bookclub Demo')](https://github.com/DiogoPaess/bookclub-web/blob/main/public/img/login.png)
+<p>
+  <img height="500" src="https://github.com/DiogoPaess/bookclub-web/blob/master/public/img/login.png" />
+</p>
 
 ## Description
 
