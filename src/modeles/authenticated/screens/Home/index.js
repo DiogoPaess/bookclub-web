@@ -5,6 +5,7 @@ import { getHighlightedBooks } from 'services/api/requests'
 
 export const HomeScreen = () => {
   const { data, isLoading } = useQuery('highlighted', getHighlightedBooks)
+
   return (
     <Flex flexDir="column">
       <NavBar />
