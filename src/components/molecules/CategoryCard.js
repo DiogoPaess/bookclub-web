@@ -4,6 +4,7 @@ import { Text } from 'components/atoms'
 export const CategoryCard = ({ onClick, name, selected }) => {
   return (
     <Flex
+      onClick={onClick}
       alignItems="center"
       justifyContent="center"
       h="36px"
